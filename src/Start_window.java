@@ -22,15 +22,15 @@ public class Start_window extends JFrame{
 	
 	
 
-	
-
-
 
 	public Start_window(String title){
 		
 	
 		super(title);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		  final Dimension startWindowSize = new Dimension(200,300);
+		 
 		
 	 final JButton Start_Button = new JButton("STARt");
 	Start_Button.setBackground(Color.RED);
@@ -96,13 +96,18 @@ public class Start_window extends JFrame{
 			System.out.println("читаем файл картинки");
 			
 			
-			
-		
+			 
 			
 			search sh = new search ( );
 			if (sh.search(start, nw_search)){
 				Start_Button.setBackground(Color.green);
-				new windowCoordinates("test");
+				 
+				 startWindowSize.height = 200;
+				 startWindowSize.width = 1024;
+				
+				 setSize(startWindowSize);
+					
+				
 				System.out.println(sh.resultSearch);	
 			}else {
 				Start_Button.setBackground(Color.black);
@@ -121,7 +126,8 @@ public class Start_window extends JFrame{
 	add(Start_Button);
 	setLayout(new FlowLayout(FlowLayout.CENTER, 0, 50));
 	
-	setSize(300, 200);
+	setSize(startWindowSize);
+	
 	setVisible(true);
 	}
 	
