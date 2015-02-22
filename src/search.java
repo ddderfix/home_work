@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 
 
 public class search {
+
 	static boolean resultSearch = false;
 	public boolean search (BufferedImage screenShot, BufferedImage readImage ){
 		
